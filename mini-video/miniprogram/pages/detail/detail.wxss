@@ -1,0 +1,191 @@
+/* pages/detail/detail.wxss */
+.play {
+  position: relative;
+  height: 54vw;
+}
+
+video {
+  width: 100%;
+  height: 54vw;
+}
+
+.top_right {
+  display: flex;
+  position: absolute;
+  right: 3%;
+  top: 2%;
+
+}
+
+.top_right image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+
+/* 文字介绍 */
+.content {
+  background-color: rgb(37, 40, 50);
+  padding: 0 25rpx 30rpx 25rpx;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.title {
+  color: #fff;
+  font-size: 43rpx;
+  font-weight: 500;
+}
+
+.summary {
+  display: flex;
+  color: #bfbfbf;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.summary1 {
+  color: #ff6002;
+}
+
+.info_r {
+  display: flex;
+  align-items: center;
+  color: #bfbfbf;
+}
+
+.brief {
+  font-size: 32rpx;
+  font-weight: 600;
+
+}
+
+.info_r image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+
+/* 用户转发 */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0;
+}
+
+.user image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.middle {
+  margin: 0 40rpx;
+}
+
+/* 剧集 */
+.episode {
+  padding: 30rpx 0;
+  border-top: 1rpx solid #e6e6e6;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.episode_l {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #fff;
+}
+
+.episode_t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  width: 90%;
+  color: #bfbfbf;
+  font-size: 26rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+.episode_t image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.episode_r {
+  display: flex;
+  justify-content: space-between;
+}
+
+.episode_d {
+  padding: 30rpx 0;
+  height: 100rpx;
+}
+
+swiper {
+  width: 100%;
+  height: 100rpx;
+}
+
+.list_1 {
+  width: 87%;
+  height: 90rpx;
+  background-color: rgb(54, 57, 66);
+  border-radius: 5rpx;
+  color: #ff6002;
+  line-height: 90rpx;
+  text-align: center
+}
+
+.list {
+  width: 87%;
+  height: 90rpx;
+  background-color: rgb(54, 57, 66);
+  border-radius: 5rpx;
+  color: #bfbfbf;
+  line-height: 90rpx;
+  text-align: center
+}
+
+/* 精彩花絮 */
+/* .teaser{
+  margin: 20rpx;
+} */
+.teaser_title {
+  font-size: 38rpx;
+  font-weight: 600;
+  color: #fff;
+  padding: 30rpx 0;
+}
+
+.teaser_list {
+  position: relative;
+  margin: 20rpx 0;
+}
+
+.summary_t {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.t_time{
+  position: absolute;
+  right: 3%;
+  bottom: 8%;  
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #fff;
+}

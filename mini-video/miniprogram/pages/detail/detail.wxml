@@ -1,0 +1,100 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <view class="play" bindtap="click" >
+     <video 
+      src="cloud://mini-video-j8ddr.6d69-mini-video-j8ddr-1302364734/[高清 1080P] 【传闻中的陈芊芊】【丁禹兮x赵露思】花絮_采访_预告_MV合集（更新至0613采访）_P1_【首发预告】.mp4" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      autoplay='{{true}}'
+      enable-progress-gesture
+      enable-play-gesture='{{true}}'
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+    <!-- 投屏和举报 -->
+    <view class="top_right" wx:if='{{show}}'  >
+      <view class="report">
+        <image src="../../images/more1.png"  class="colon"/>
+      </view>
+       <view class="report">
+        <image src="../../images/projection1.png"  />
+      </view>
+    </view>
+  </view>
+  <!-- 文字介绍 -->
+  <view class="content">
+   <view class="info">
+    <view class="info_l">
+      <view class="title">传闻中的陈芊芊</view>
+      <view class="summary">
+        <view>9分 · </view>
+        <view class="summary1"> VIP</view>
+        <view>· 爱情 · 全24集 · 15.9亿</view>
+      </view>
+    </view>
+    <view class="info_r">
+      <view class="brief">简介</view>
+      <image src="../../images/detail/arrows.png"  />
+    </view>
+   </view>
+     <!-- 转发之类 -->
+    <view class="user">
+      <view class="uesr_l">
+        <image src="../../images/detail/more2.png" />
+      </view>
+      <view class="uesr_r">
+        <image src="../../images/brush/share.png" />
+        <image src="../../images/brush/wechat.png" class="middle" />
+        <image src="../../images/detail/add.png" />
+      </view>
+    </view>
+
+  <!--剧集 -->
+  <view class="episode">
+    <view class="episode_t">
+      <view class="episode_l">剧集</view>
+      <view class="episode_r">
+        <view class="time">每周一二20点更新俩集、VIP抢先看六级</view>
+        <image src="../../images/detail/arrows.png"  />
+      </view>
+    </view>
+    <view class="episode_d">
+      <swiper display-multiple-items='6.2'>
+        <swiper-item   wx:for='{{episode}}' wx:key='index'  >
+            <view  class="{{index === 0 ? 'list_1':'list'}}">{{item}}</view>
+        </swiper-item >
+      </swiper>
+    </view>
+  </view>
+  <!-- 精彩片花 -->
+  <view class="teaser">
+   <view class="teaser_title">
+   精彩片花
+   </view>
+   <view class="teaser_list" wx:for='{{teaser}}'  wx:key='index'    bindtap="hidden">
+    <video 
+      src="{{item.url}}" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      enable-progress-gesture
+      enable-play-gesture='{{true}}'
+      show-center-play-btn
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+    <block wx:if='{{time}}' >
+      <view class="summary_t"  >{{item.title}}</view>
+      <view class="t_time">{{item.time}}</view>
+    </block>
+   </view>
+  </view>
+    </view>
+</view>

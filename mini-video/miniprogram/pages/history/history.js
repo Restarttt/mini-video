@@ -1,17 +1,33 @@
-// pages/brush/brush.js
+// pages/history/history.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    controls:false
+    list: []
   },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'history',
+      data: {
+        action: 'getlist'
+      },
+      success: res => {
+        console.log(res)
+        this.setData({
+          list: res.result.data
+        })
+      },
+      fail: err => {
+        console.log(err)
+      }
+    })
 
   },
 

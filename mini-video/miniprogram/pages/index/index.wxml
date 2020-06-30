@@ -1,4 +1,109 @@
 <!--miniprogram/pages/index/index.wxml-->
 <view class="index">
-
-</view>
+<!-- 导航栏 -->
+  <view class="topnav">
+  <swiper display-multiple-items='5'>
+    <swiper-item  class="nav_list" wx:for='{{arr}}' wx:key='index' >  
+       <view class="{{item.type === active ? 'subnav' : 'keyword'}}" bindtap='gettype' data-type='{{item.type}}' >{{item.name}}</view>
+    </swiper-item>
+  </swiper>
+  </view>
+  <!-- 搜索框 -->
+    <view class="search"  bindtap="go">
+      <image src="../../images/icon/glass.png" />
+      <view class="search_text">
+      请输入片名、主演或导演
+      </view>
+    </view>  
+     <!-- 请求数据 -->
+     <view class="all" wx:for='{{all}}' wx:key='index'>
+          <!-- 滚动图 -->
+          <view class="roll" wx:if='{{index===0}}' >
+            <swiper  class="roll_swiper" autoplay="{{autoplay}}" duration='{{duration}}'>
+              <swiper-item wx:for="{{item.list}}" wx:key="index"  bindtap='go_detail' data-item='{{item}}'>
+                <view class="big-pic" >
+                  <view class="img-suspend">
+                    <image src="{{item.img}}" class="full-card" />
+                    <view class="member-center" wx:if="item.vip == 10">
+                      <view class="triangle"></view>
+                      <view class="vip">VIP</view>
+                      </view>
+                       <view class="complete">
+                      <view class="sum">更新至{{item.number}}集</view>
+                    </view>
+                  </view>
+                  <view class="swiper-title">
+                    <view>{{item.summary}}</view>
+                  </view>
+                </view>
+              </swiper-item>
+             </swiper>
+          </view>
+          <!-- 猜你在追 -->
+           <view class="swiper-child" wx:if="{{index===1}}">
+              <view class="h5"> {{item.title}}: </view>
+                  <swiper  class="children_swiper" display-multiple-items='2.1'>
+                    <swiper-item wx:for="{{item.list}}" wx:key="index" >
+                      <view class="cartoon">
+                        <view class="img-suspend">
+                         <image src="{{item.img}}"  bindtap='go_detail'  data-item='{{item}}'/> 
+                      <!-- 左上角 -->
+                         <view class="member-center" wx:if="item.vip == 10"> 
+                            <view class="triangle"></view>
+                            <view class="vip" wx:if='item.type ===4'>超前点播</view>
+                         </view>
+                            <!-- 右下角 -->
+                          <view class="complete">
+                            <view  class="sum">全{{item.max}}集</view>
+                            <!-- <view wx:if="item.time">{{item.time}}<view> -->
+                          </view>
+                       </view>   
+                            <view class="big-title">{{item.name}}</view>
+                            <view class="small-title">{{item.summary}}</view>
+                      </view>  
+                    </swiper-item> 
+                  </swiper>
+            </view>       
+      <!-- 重磅 -->
+      <view  class="submenu" wx:if="{{index===2}}">
+         <view class="h5"> {{item.title}}: </view>
+           <view class="content"> 
+              <view class="content-1" wx:for="{{item.list}}" wx:key="index">
+                <view class="img-suspend">
+                  <image src="{{item.img}}"  bindtap='go_detail'  data-item='{{item}}' />
+                  <view class="complete">
+                  <view  class="sum">全{{item.max}}集</view>
+                  </view>
+                  <!-- <view class="member-center" wx:if="item.vip ==10">
+                    <view class="triangle"><view>
+                    <view>{{item.member}}</view>
+                  </view> -->
+                </view> 
+                <view class="big-title">{{item.name}}</view>
+                  <view class="small-title">{{item.summary}}</view>
+                   </view>  
+          </view>  
+          </view>
+  <!-- 同步剧场 -->
+  <view class="big-theater" wx:if="{{index===3}}">
+    <view class="h5"> {{item.title}}: </view>
+    <view class="content">
+      <view wx:for="{{item.list}}" wx:key="index"  class=" {{ index === 0 ? 'first_content' : 'content-1'}}">
+        <view  class="img-suspend">
+          <image  class="sync" src="{{item.img}}"  bindtap='go_detail'  data-item='{{item}}'/>
+             <view class="complete">
+            <view  class="sum">{{item.score}}.0</view >
+          </view >
+          <!-- <view  class="member-center" wx:if="item.vip == 10">
+            <view  class="triangle"></view >
+            <view >vip</view >
+          </view > -->
+        </view >
+        <view  class="big-title">{{item.name}}</view >
+        <view class="small-title">{{item.summary}}</view >
+      </view >
+    </view >
+  </view >
+  <!--  -->
+       </view>  
+     </view>

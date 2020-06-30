@@ -1,2 +1,24 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<view class="home">
+  <view class="personal">
+    <view class="info">
+      <image src="{{userImg}}" />
+      <view class="wechat_name" >{{userName}}</view>
+    </view>
+    	<button class="login_btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{toggle}}">登录</button>
+  </view>
+    <mp-cell link='true'bindtap='go_vip'  data-img='{{userImg}}' data-name='{{userName}}'>
+                <view style="display: inline-block; vertical-align: middle">开通VIP会员</view>
+            </mp-cell>
+                <mp-cell link='true' bindtap="go_history">
+                <view style="display: inline-block; vertical-align: middle"  >观看历史</view>
+            </mp-cell>
+                <mp-cell link='true'>
+                <view style="display: inline-block; vertical-align: middle">我的看单</view>
+            </mp-cell>
+                <mp-cell link='true' bindtap='go_set'>
+                <view style="display: inline-block; vertical-align: middle">设置</view>
+                <!-- <mp-badge style="margin-left: 5px;" content="New"/> -->
+            </mp-cell>
+</view>

@@ -1,11 +1,19 @@
-// pages/brush/brush.js
+// pages/set/set.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    controls:false
+    switch:false,
+
+  },
+  clear(){
+    wx.showToast({
+      title: '清除成功',
+      success:'success'
+    })
+
   },
 
   /**

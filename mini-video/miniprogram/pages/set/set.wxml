@@ -1,0 +1,17 @@
+<!--pages/set/set.wxml-->
+<view class="set">
+  <view class="jump">
+    <view class="text">自动跳过片头片尾</view>
+     <switch checked="{{switch}}" bindchange="switch1" color="#ff6002"/>
+  </view>
+  <view class="cache" bindtap="clear">
+    <view class="text">清除缓存</view>
+    <view class="size" >111kb</view>
+  </view>
+  <view class="jump">
+    <view class="text">意见反馈</view>
+   <button open-type="contact" bindcontact="handleContact" size="mini" hover-class='none'>
+   <image src="../../images/service.png"  />
+   </button>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<!--pages/VIP/VIP.wxml-->
+
+<view class="vip">
+  <!-- 用户信息 -->
+  <view class="info">
+    <image src="{{userImg}}" />
+    <view class="member">
+      <view class="wechat_name">{{userName}}</view>
+      <view class="menmber_t">您的腾讯视频VIP已过期</view>
+    </view>
+  </view>
+  <!-- VIP套餐 -->
+  <view class="set-meal">
+    <view class="title">
+      <view class="title_l">VIP套餐</view>
+      <view class="title_r">
+      服务协议
+      <image src="../../images/detail/arrows.png" />
+      </view>
+    </view>
+    <view class="grade"  wx:for='{{grade}}' wx:key='index'>
+      <view class="grade_l">
+        <view class="month">{{item.month}}</view>
+        <view class="price">{{item.price}}</view>
+        <view class="month">元</view>
+        <view class="paddle">{{item.paddle}}</view>
+        <view class="super" wx:if='{{item.type ===1}}'>超值</view>
+      </view>
+      <view class="grade_r">
+        开通
+      </view>
+    </view>
+  </view>
+  <!-- VIP大片 -->
+  <view class="set-meal">
+    <view class="title">
+      <view class="title_l">VIP大片</view>
+      <view class="title_r">
+     更多
+      <image src="../../images/detail/arrows.png" />
+      </view>
+    </view>
+    <!--  -->
+    <view class="list_pic">
+        <view class="list" wx:for='{{list}}' wx:key='index'>
+          <image src="{{item.img}}" />
+          <view class="name">{{item.name}}</view>
+        </view>
+    </view>
+  </view>
+  <!-- vip特权 -->
+  <view class="set-meal">
+      <view class="title">
+      <view class="title_l">VIP特权</view>
+      </view>
+      <swiper display-multiple-items='4'>
+        <swiper-item wx:for='{{privilege}}' wx:key='index' >
+        <view class="privilege" >
+          <image src="{{item.img}}" />
+          <view class="brief">{{item.name}}</view>
+        </view>
+         <view class="privilege" >
+          <image src="{{item.img1}}" />
+          <view class="brief">{{item.name1}}</view>
+        </view>
+        </swiper-item>
+      </swiper>
+  </view>
+  <!--  -->
+</view>

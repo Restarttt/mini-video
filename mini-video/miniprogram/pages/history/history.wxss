@@ -1,0 +1,49 @@
+/* pages/history/history.wxss */
+.history{
+  margin-bottom: 50rpx;
+  padding:30rpx 20rpx;
+  background-color: #fff;
+}
+.list{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+
+}
+.list_l image{
+  width: 330rpx;
+  height: 210rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.list_r .title{
+  font-size: 37rpx;
+
+}
+.durtion{
+  display: flex;
+  margin-top: 20rpx;
+
+}
+.durtion image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+
+}
+.time{
+  color: #bfbfbf;
+  font-size: 28rpx;
+}
+.compile{
+  width: 100%;
+  position: fixed;
+  bottom: 1rpx;
+  border-top: 1rpx solid #afafaf;
+  height: 104rpx;
+  text-align: center;
+  line-height: 104rpx;
+  font-size: 37rpx;
+  background-color: #FFF;
+  
+}

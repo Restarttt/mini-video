@@ -1,0 +1,19 @@
+<!--pages/history/history.wxml-->
+<view class="history">
+  <view class="list" wx:for='{{list}}' wx:key='index'>
+    <view class="list_l" >
+        <image src="{{item.img}}"  />
+    </view>
+    <view class="list_r">
+     <view class="title">{{item.name}}</view>
+     <view class="durtion">
+      <image src="../../images/phone.png" />
+      <view class="time">{{item. duration}}</view>
+     </view>
+    </view>
+  </view>
+  <!-- 编辑 -->
+  <view class="compile">
+    编辑
+  </view>
+</view>

@@ -1,1 +1,43 @@
 /* pages/home/home.wxss */
+.home{
+  background-color: #fff;
+}
+.personal{
+  width: 100%;
+  border-bottom: 2rpx solid #dedede;
+  margin: 0 auto;
+  padding: 30rpx 0;
+
+}
+.info{
+  width:23%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.personal image{
+  width: 175rpx;
+  height: 175rpx;
+  border-radius: 100%;
+  border: 2rpx solid #e8e8e8;
+  margin-bottom: 20rpx;
+}
+.wechat_name{
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.login_btn {
+  width: 40%;
+  height: 67rpx;
+  margin: 0 auto;
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+  color: #fff;
+  border-radius: 50rpx;
+
+}
+button:not([size='mini']) {
+
+  width: 116px;
+  margin-left: auto;
+  margin-right: auto;
+}  

@@ -1,1 +1,40 @@
 /* pages/brush/brush.wxss */
+.video{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#myVideo{
+  width: 100%;
+  height: 100%;
+}
+.suspend{
+  position: absolute;
+  right: 8%;
+  bottom: 6%;
+
+}
+.number{
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: -19rpx;
+}
+.icon{
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 30rpx;
+
+}
+.icon image{
+  width: 100%;
+  height: 100%;
+}
+/* 标题 */
+.title{
+  position: absolute;
+  color: #fff;
+  font-size: 30rpx;
+  bottom: 7%;
+  left: 6%;
+}

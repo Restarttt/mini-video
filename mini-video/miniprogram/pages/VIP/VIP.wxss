@@ -1,0 +1,125 @@
+/* pages/VIP/VIP.wxss */
+.set-meal {
+  background-color: #fff;
+  padding: 25rpx 30rpx;
+  margin: 25rpx 0;
+}
+/* 用户 */
+.info{
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.info image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.menmber_t{
+  color: #bfbfbf;
+  font-size: 28rpx;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+}
+
+.title_l {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.title_r {
+  font-size: 34rpx;
+  color: #bfbfbf;
+
+  vertical-align: middle;
+}
+
+.title_r image {
+  width: 30rpx ;
+  height: 30rpx;
+}
+
+/* 等级 */
+.grade {
+  padding: 20rpx;
+  border-top: 1rpx solid #bfbfbf;
+  display: flex;
+  justify-content: space-between;
+}
+.grade_l{
+  display: flex;
+  align-items: center;
+}
+.month{
+  font-size: 28rpx;
+}
+.price{
+  color: #f2ca5b;
+}
+/* 超值 */
+.super{
+  color: #fff;
+  background: #ff0000;
+  font-size: 21rpx;
+  padding: 1rpx 10rpx;
+  margin-left: 20rpx;
+  border-radius: 14rpx;
+  
+}
+.grade_r{
+  padding: 8rpx 50rpx;
+  color: #fff;
+  background: #f2ca5b;
+  border-radius: 50rpx;
+  
+}
+/* dappian */
+.list_pic{
+  display: flex;
+  justify-content: space-between;
+}
+.list{
+  width: 31%;
+}
+.list image{
+  width: 100%;
+  height: 350rpx;
+  border-radius: 18rpx;
+  
+
+}
+ .name{
+  font-size: 28rpx;
+  text-align: center;
+}
+
+/* tequan */
+.privilege{
+  height: 182rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #d6d6d6;
+  border-right: 1rpx solid #d6d6d6;
+}
+/* .privilege1{
+
+} */
+
+.privilege image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 19rpx;
+
+}
+.brief{
+  font-size: 28rpx;
+ color: #afafaf;
+}
+swiper{
+  height: 182px;
+}

@@ -1,0 +1,33 @@
+<!--pages/serach/search.wxml-->
+<view class="search">
+<!-- 搜索 -->
+<view class="top">
+  <view class="btn">
+    <input type="text" placeholder="请输入片名、主演或导演"> </input>
+     <image src="../../images/icon/gray.png" class="" />
+  </view>
+      <view class="back" bindtap="go">取消</view>
+  </view>
+  <!-- 导航栏 -->
+ <view class="topnav">
+  <swiper display-multiple-items='7'>
+    <swiper-item  class="nav_list" wx:for='{{arr}}' wx:key='index' >  
+       <view class="{{item.type === active ? 'subnav' : 'keyword'}}" bindtap='gettype' data-type='{{item.type}}' >{{item.name }}</view>
+    </swiper-item>
+  </swiper>
+  </view>
+  <!-- 关键字 -->
+  <view class="key-words">
+    <view class="key_list" wx:for="{{key_list}}" wx:key="index">
+        <view class="list">
+          <view
+         class="{{(index === 0 ? 'hot_frist' :(index ===1 ? 'hot_second':'hot_three'))}} {{ index >2 ? 'number' : '' }}"
+          >{{item.num}}</view>
+          <view class="list_title">{{item.title}}</view>
+        </view>
+        <view
+          class="{{(item.status == 0 ? 'line' :( item.status ==1 ? 'up':'down'))}}"
+        ></view>
+    </view>
+  </view>
+</view>

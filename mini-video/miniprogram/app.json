@@ -3,12 +3,17 @@
     "pages/index/index",
     "pages/home/home",
     "pages/short_video/short_video",
-    "pages/brush/brush"
+    "pages/brush/brush",
+    "pages/serach/search",
+    "pages/detail/detail",
+    "pages/set/set",
+    "pages/history/history",
+    "pages/VIP/VIP"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#fff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "我的小电视",
     "navigationBarTextStyle": "black"
   },
@@ -21,9 +26,6 @@
       "pagePath": "pages/index/index",
       "text": "首页"
     }, {
-      "pagePath":  "pages/short_video/short_video",
-      "text": "短视频"
-    } , {
       "pagePath":  "pages/brush/brush",
       "text": "刷一刷"
     } , {
@@ -32,5 +34,9 @@
     }]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  }
 }

@@ -1,2 +1,40 @@
 <!--pages/brush/brush.wxml-->
-<text>pages/brush/brush.wxml</text>
+<view class="brush">
+  <view class="video">
+      <video 
+      id="myVideo" 
+      src="cloud://mini-video-j8ddr.6d69-mini-video-j8ddr-1302364734/video/bb4eebb7841a08d06f9611e20e0002ea.mp4" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls='{{ controls}}'
+      enable-progress-gesture
+      enable-play-gesture='{{true}}'
+      autoplay="{{true}}"
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+    <!-- 左下角标题文字 -->
+    <view class="title">
+    BLACKPINK群魔乱舞
+    </view>
+    <!-- 右边分享 -->
+    <view class="suspend">
+      <view class="icon">
+        <image src="../../images/brush/like.png"></image>
+      </view>
+        <view class="number">111</view>
+         <view class="icon">
+        <image src="../../images/brush/share.png"></image>
+      </view>
+         <view class="icon">
+        <image src="../../images/brush/wechat.png"></image>
+      </view>
+         <view class="icon">
+        <image src="../../images/brush/more.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
